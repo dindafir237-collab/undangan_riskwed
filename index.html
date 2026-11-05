@@ -43,7 +43,7 @@
             width: 100%;
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
-                        url('galeri1.jpg') center/cover no-repeat;
+                        url('1.jpeg') center/cover no-repeat;
             z-index: 1000;
             display: flex;
             flex-direction: column;
@@ -423,7 +423,7 @@
 </head>
 <body>
 
-    <!-- MUSIC PLAYER -->
+    <!-- MUSIC PLAYER (Memakai lagu_1.mp3 milikmu di GitHub) -->
     <audio id="bg-music" loop>
         <source src="lagu_1.mp3" type="audio/mpeg">
     </audio>
@@ -474,17 +474,19 @@
             
             <div class="couple-details">
                 <div class="person">
-                    <img src="pria.jpeg" alt="Ahmad Isfi Roni Fajri" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80'">
+                    <!-- Memakai pria.jpeg dari file GitHub kamu -->
+                    <img src="pria.jpeg" alt="Ahmad Isfi Roni Fajri">
                     <h3>Ahmad Isfi Roni Fajri</h3>
-                    <p style="font-size: 0.85rem; margin-top: 5px;">Putra dari Bpk Surakno<br>& Ibu Warina</p>
+                    <p style="font-size: 0.85rem; margin-top: 5px;">Putra dari Bpk. ...<br>& Ibu ...</p>
                 </div>
                 
                 <div class="couple-names">&</div>
 
                 <div class="person">
-                    <img src="cewek.jpeg" alt="Riska Ananda" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80'">
+                    <!-- Memakai cewek.jpeg dari file GitHub kamu -->
+                    <img src="cewek.jpeg" alt="Riska Ananda">
                     <h3>Riska Ananda</h3>
-                    <p style="font-size: 0.85rem; margin-top: 5px;">Putri dari Bpk Said<br>& Ibu Nurhayati</p>
+                    <p style="font-size: 0.85rem; margin-top: 5px;">Putri dari Bpk. ...<br>& Ibu ...</p>
                 </div>
             </div>
         </section>
@@ -509,29 +511,29 @@
             
             <div class="carousel-container">
                 <div class="carousel-slides" id="slides">
-                    <img src="tu.jpeg" alt="Foto 1" onerror="this.src='https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80'">
-                    <img src="1.jpeg" alt="Foto 2" onerror="this.src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80'">
-                    <img src="21.jpeg" alt="Foto 3" onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80'">
+                    <!-- Memakai 1.jpeg, 21.jpeg, tu.jpeg dari file GitHub kamu -->
+                    <img src="1.jpeg" alt="Foto 1">
+                    <img src="21.jpeg" alt="Foto 2">
+                    <img src="tu.jpeg" alt="Foto 3">
                 </div>
                 <button class="carousel-btn prev" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
                 <button class="carousel-btn next" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
             </div>
         </section>
 
-       <!-- ACARA & MAPS SECTION -->
+        <!-- ACARA & MAPS SECTION -->
         <section>
             <h2>Waktu & Lokasi</h2>
             <p><strong>Senin, 21 Desember 2026</strong></p>
             <p style="margin-top: 5px;">Waktu: Pukul Bebas / Sesuai Kehadiran</p>
             <p style="margin-top: 10px;"><strong>Dsn. Pelinggihan, Grogol, Kec. Giri, Kab. Banyuwangi</strong></p>
             
-            <!-- Google Maps Embed yang baru kamu berikan -->
+            <!-- Google Maps Embed Street View yang Benar -->
             <iframe class="map-frame" 
                 src="https://www.google.com/maps/embed?pb=!4v1793853155991!6m8!1m7!1s-OPvEMiGRFv6h7KC110eLg!2m2!1d-8.187290578420367!2d114.3258982438768!3f145.2262149902537!4f-31.11713040752001!5f0.7820865974627469" 
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
             </iframe>
-            
-            <!-- Tombol untuk Buka Aplikasi Google Maps jika ingin navigasi langsung -->
+
             <div style="margin-top: 15px;">
                 <a href="https://maps.app.goo.gl/zjigk3wXzuBfRYfm6" target="_blank" 
                    style="display: inline-block; padding: 10px 20px; background: var(--primary-gold); color: #000; text-decoration: none; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
@@ -540,7 +542,7 @@
             </div>
         </section>
 
-        <!-- RSVP & BUKU TAMU SECTION (KOSONG DI AWAL) -->
+        <!-- RSVP & BUKU TAMU SECTION -->
         <section>
             <h2>RSVP & Ucapan</h2>
             <p>Berikan konfirmasi kehadiran dan doa restu Anda</p>
@@ -576,7 +578,6 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        // Ambil nama tamu dari URL (Contoh: index.html?to=Budi)
         const urlParams = new URLSearchParams(window.location.search);
         const guestName = urlParams.get('to');
         if (guestName) {
@@ -594,7 +595,6 @@
             musicBtn.classList.add('playing');
         }
 
-        // Geser ke atas / swipe untuk mobile
         cover.addEventListener('touchstart', (e) => {
             startY = e.touches[0].clientY;
         });
@@ -619,7 +619,6 @@
             }
         }
 
-        // Carousel / Slider Foto
         let slideIndex = 0;
         const slides = document.getElementById('slides');
         const totalSlides = slides.children.length;
@@ -633,7 +632,6 @@
             moveSlide(1);
         }, 4000);
 
-        // Countdown Timer ke tanggal 2026-12-21
         const weddingDate = new Date("2026-12-21T09:00:00").getTime();
 
         setInterval(() => {
@@ -648,7 +646,6 @@
             }
         }, 1000);
 
-        // Form RSVP & Ucapan Real-time
         let wishesData = [];
 
         function submitWish(e) {
@@ -657,7 +654,7 @@
             const status = document.getElementById('wish-status').value;
             const message = document.getElementById('wish-message').value;
 
-            const newWish = { name, status, message, date: "Baru saja" };
+            const newWish = { name, status, message };
             wishesData.unshift(newWish);
             renderWishes();
 
